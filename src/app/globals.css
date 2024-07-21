@@ -2,32 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+img {
+  transition: box-shadow 0.3s ease;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  }
+
+img:hover {
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.image-container {
+  position: relative;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: -30%;
+  width: 250px;
+  height: 250px;
+  filter: blur(20px);
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: blob 5s linear infinite;
+  display: block;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 40% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
   }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+
 }

@@ -1,17 +1,37 @@
-import type { Config } from "tailwindcss";
+import * as colors from '@radix-ui/colors';
+import type { Config } from 'tailwindcss';
+
+function createScale(color: Record<string, string>): Record<string, string> {
+  return Object.entries(color).reduce<Record<string, string>>(
+    (acc, [key, value]) => {
+      const colorIndex = key.match(/[A-Za-z]+(\d+)/)?.[1];
+      if (colorIndex) {
+        acc[colorIndex] = value;
+      }
+      return acc;
+    },
+    {},
+  );
+}
 
 const config: Config = {
+  darkMode: 'class',
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        fraunces: ['var(--font-fraunces)', 'ui-serif'],
+        outfit: ['var(--font-outfit)', 'ui-sans-serif'],
+      },
+      colors: {
+        brand: createScale(colors.violet),
+        darkbrand: createScale(colors.violetDark),
+        greyscale: createScale(colors.mauve),
+        darkgreyscale: createScale(colors.mauveDark),
       },
     },
   },
