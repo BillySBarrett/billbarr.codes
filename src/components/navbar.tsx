@@ -25,7 +25,7 @@ export const Navbar: FC = () => {
 
   const link = cn(
     'text-lg lg:text-xl font-outfit',
-    'hover:text-brand-11 dark:hover:text-darkbrand-11 transition-colors duration-200',
+    'hover:text-brand-11 dark:hover:text-brandDark-11 transition-colors duration-200',
   );
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: Don't make no sense

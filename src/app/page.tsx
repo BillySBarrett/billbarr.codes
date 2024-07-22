@@ -16,7 +16,7 @@ export default function Home() {
               love to work on the coolest projects and make things people enjoy.
               Currently working at{' '}
               <a
-                className="text-brand-12 dark:text-darkbrand-12 hover:underline"
+                className="text-brand-12 dark:text-brandDark-12 hover:underline"
                 href="https://doserne.com"
               >
                 Doserne
@@ -25,7 +25,7 @@ export default function Home() {
             </Text>
           </header>
           <div className="flex order-first md:order-last justify-center">
-            <div className=" relative image-container before:bg-brand-8 dark:before:bg-darkbrand-8">
+            <div className=" relative image-container before:bg-brand-8 dark:before:bg-brandDark-8">
               <div className="slider-thumb block " />
               <Image
                 src="/cv.jpeg"

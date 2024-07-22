@@ -33,7 +33,7 @@ export default function RootLayout({
         className={cn(
           fraunces.variable,
           outfit.variable,
-          'bg-brand-1 dark:bg-darkbrand-1 text-greyscale-12 dark:text-darkgreyscale-12 font-outfit ',
+          'bg-brand-1 dark:bg-brandDark-1 text-gs-12 dark:text-gsDark-12 font-outfit ',
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>

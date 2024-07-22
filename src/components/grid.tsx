@@ -3,7 +3,7 @@ import type { FC } from 'react';
 export const Grid: FC = () => {
   return (
     <svg
-      className="absolute inset-0 -z-10 h-full w-full stroke-brand-8 dark:stroke-darkbrand-8 [mask-image:radial-gradient(60%_15%_at_top_left,white,transparent)]"
+      className="absolute inset-0 -z-10 h-full w-full stroke-brand-8 dark:stroke-brandDark-8 [mask-image:radial-gradient(60%_15%_at_top_left,white,transparent)]"
       aria-hidden="true"
     >
       <defs>
