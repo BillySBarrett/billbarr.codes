@@ -14,6 +14,18 @@ function createScale(color: Record<string, string>): Record<string, string> {
   );
 }
 
+// a function to generate the brand scale "like" "brand-1": "hsl(var(--brand-1) / <alpha-value>)", from 1 to nrColors
+function createBrandScale(nrColors: number, dark: boolean): Record<string, string> {
+  const colors: Record<string, string> = {};
+  for (let i = 1; i <= nrColors; i++) {
+    if (dark) {
+      colors[`brandDark-${i}`] = `hsl(var(--brandDark-${i}) / <alpha-value>)`;
+    }
+    colors[`brand-${i}`] = `hsl(var(--brand-${i}) / <alpha-value>)`;
+  }
+  return colors;
+}
+
 const config: Config = {
   darkMode: 'class',
   content: [
@@ -28,8 +40,8 @@ const config: Config = {
         outfit: ['var(--font-outfit)', 'ui-sans-serif'],
       },
       colors: {
-        brand: createScale(colors.iris),
-        brandDark: createScale(colors.irisDark),
+        ...createBrandScale(12, false),
+        ...createBrandScale(12, true),
         gs: createScale(colors.mauve),
         gsDark: createScale(colors.mauveDark),
       },

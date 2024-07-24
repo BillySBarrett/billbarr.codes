@@ -1,13 +1,20 @@
+@import '../lib/colors/default.css';
+@import '../lib/colors/grass.css';
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* different color mode with different colors */
+
 
 img {
   transition: box-shadow 0.3s ease;
 }
 body {
-    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
-  }
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
 
 img:hover {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
@@ -50,5 +57,4 @@ img:hover {
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
   }
-
 }
