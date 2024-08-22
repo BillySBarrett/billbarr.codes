@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 
-export function ModeToggle() {
+export default function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
@@ -24,7 +24,7 @@ export function ModeToggle() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="start">
         <DropdownMenuItem onClick={() => setTheme('light')}>
           Light
         </DropdownMenuItem>

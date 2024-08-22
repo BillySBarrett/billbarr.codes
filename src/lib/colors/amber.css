@@ -1,0 +1,27 @@
+.amber {
+  --brand-1: 40 60% 99%;
+  --brand-2: 51 91% 95%;
+  --brand-3: 52 100% 88%;
+  --brand-4: 50 100% 81%;
+  --brand-5: 50 94% 73%;
+  --brand-6: 46 84% 70%;
+  --brand-7: 42 75% 65%;
+  --brand-8: 38 75% 55%;
+  --brand-9: 42 100% 62%;
+  --brand-10: 42 100% 55%;
+  --brand-11: 35 100% 34%;
+  --brand-12: 24 40% 22%;
+
+  --brandDark-1: 36 29% 7%;
+  --brandDark-2: 39 32% 9%;
+  --brandDark-3: 36 71% 11%;
+  --brandDark-4: 37 100% 12%;
+  --brandDark-5: 37 100% 15%;
+  --brandDark-6: 39 90% 19%;
+  --brandDark-7: 37 64% 27%;
+  --brandDark-8: 36 60% 35%;
+  --brandDark-9: 42 100% 62%;
+  --brandDark-10: 50 100% 52%;
+  --brandDark-11: 46 100% 54%;
+  --brandDark-12: 41 100% 85%;
+}

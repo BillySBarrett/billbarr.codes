@@ -1,4 +1,5 @@
-.violet {
+@layer base {
+  :root {
     --brand-1: 270 50% 99%;
     --brand-2: 257 100% 99%;
     --brand-3: 257 88% 97%;
@@ -24,4 +25,5 @@
     --brandDark-10: 252 60% 63%;
     --brandDark-11: 253 100% 83%;
     --brandDark-12: 249 94% 93%;
+  }
 }

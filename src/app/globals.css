@@ -1,23 +1,46 @@
-@import '../lib/colors/default.css';
-@import '../lib/colors/grass.css';
+@import "tailwindcss/base";
+@import "../lib/colors/default.css";
+@import "../lib/colors/grass.css";
+@import "../lib/colors/ruby.css";
+@import "../lib/colors/jade.css";
+@import "../lib/colors/amber.css";
+@import "../lib/colors/sky.css";
+@import "../lib/colors/tomato.css";
+@import "../lib/colors/bronze.css";
 
-
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* different color mode with different colors */
-
 
 img {
   transition: box-shadow 0.3s ease;
 }
 body {
-  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out; /* this is for light/dark mode transitions */
+  
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 img:hover {
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes mask-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.mask-animation {
+  animation: mask-slide 5s linear infinite;
 }
 
 .image-container {

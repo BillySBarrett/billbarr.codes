@@ -1,5 +1,5 @@
-import { Grid } from '@/components/grid';
-import { ModeToggle } from '@/components/mode-toggle';
+import ColorToggle from '@/components/color-toggle';
+import ModeToggle from '@/components/mode-toggle';
 import { Text } from '@/components/text';
 import { Title } from '@/components/title';
 import Image from 'next/image';
@@ -24,7 +24,7 @@ export default function Home() {
               .
             </Text>
           </header>
-          <div className="flex order-first md:order-last justify-center">
+          <div className="flex md:pt-0 pt-8 order-first md:order-last justify-center">
             <div className=" relative image-container before:bg-brand-8 dark:before:bg-brandDark-8">
               <div className="slider-thumb block " />
               <Image
@@ -37,7 +37,10 @@ export default function Home() {
             </div>
           </div>
         </address>
-        <ModeToggle />
+        <div className="flex gap-4 py-8 lg:py-0">
+          <ModeToggle />
+          <ColorToggle />
+        </div>
       </section>
     </main>
   );

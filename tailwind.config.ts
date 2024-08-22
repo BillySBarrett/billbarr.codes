@@ -14,8 +14,10 @@ function createScale(color: Record<string, string>): Record<string, string> {
   );
 }
 
-// a function to generate the brand scale "like" "brand-1": "hsl(var(--brand-1) / <alpha-value>)", from 1 to nrColors
-function createBrandScale(nrColors: number, dark: boolean): Record<string, string> {
+function createBrandScale(
+  nrColors: number,
+  dark: boolean,
+): Record<string, string> {
   const colors: Record<string, string> = {};
   for (let i = 1; i <= nrColors; i++) {
     if (dark) {
@@ -42,8 +44,36 @@ const config: Config = {
       colors: {
         ...createBrandScale(12, false),
         ...createBrandScale(12, true),
-        gs: createScale(colors.mauve),
-        gsDark: createScale(colors.mauveDark),
+
+        gs: createScale(colors.gray),
+        gsDark: createScale(colors.grayDark),
+      },
+      keyframes: {
+        slideUpAndFade: {
+          from: { opacity: '0', transform: 'translateY(2px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideRightAndFade: {
+          from: { opacity: '0', transform: 'translateX(-2px)' },
+          to: { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideDownAndFade: {
+          from: { opacity: '0', transform: 'translateY(-2px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideLeftAndFade: {
+          from: { opacity: '0', transform: 'translateX(2px)' },
+          to: { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideRightAndFade:
+          'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideDownAndFade:
+          'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideLeftAndFade:
+          'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

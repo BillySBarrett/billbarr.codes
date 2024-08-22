@@ -1,0 +1,27 @@
+.bronze {
+  --brand-1: 0 20% 99%;
+  --brand-2: 15 67% 98%;
+  --brand-3: 15 40% 94%;
+  --brand-4: 19 33% 91%;
+  --brand-5: 18 29% 87%;
+  --brand-6: 18 29% 82%;
+  --brand-7: 17 27% 76%;
+  --brand-8: 16 25% 68%;
+  --brand-9: 18 20% 54%;
+  --brand-10: 16 18% 50%;
+  --brand-11: 15 20% 41%;
+  --brand-12: 12 22% 22%;
+
+  --brandDark-1: 15 11% 7%;
+  --brandDark-2: 24 10% 10%;
+  --brandDark-3: 20 9% 14%;
+  --brandDark-4: 20 10% 17%;
+  --brandDark-5: 16 10% 21%;
+  --brandDark-6: 16 11% 26%;
+  --brandDark-7: 16 12% 32%;
+  --brandDark-8: 18 12% 39%;
+  --brandDark-9: 18 20% 54%;
+  --brandDark-10: 18 23% 59%;
+  --brandDark-11: 18 35% 74%;
+  --brandDark-12: 21 36% 89%;
+}

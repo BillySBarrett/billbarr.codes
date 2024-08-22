@@ -1,0 +1,27 @@
+.tomato {
+  --brand-1: 0 100% 99%;
+  --brand-2: 7 100% 98%;
+  --brand-3: 10 92% 95%;
+  --brand-4: 12 100% 91%;
+  --brand-5: 11 100% 88%;
+  --brand-6: 11 95% 84%;
+  --brand-7: 10 82% 78%;
+  --brand-8: 10 75% 70%;
+  --brand-9: 10 78% 54%;
+  --brand-10: 10 73% 51%;
+  --brand-11: 10 82% 45%;
+  --brand-12: 8 50% 24%;
+
+  --brandDark-1: 0 17% 8%;
+  --brandDark-2: 10 24% 10%;
+  --brandDark-3: 5 48% 15%;
+  --brandDark-4: 4 64% 19%;
+  --brandDark-5: 5 62% 23%;
+  --brandDark-6: 7 55% 28%;
+  --brandDark-7: 9 49% 35%;
+  --brandDark-8: 10 50% 45%;
+  --brandDark-9: 10 78% 54%;
+  --brandDark-10: 11 82% 59%;
+  --brandDark-11: 12 100% 75%;
+  --brandDark-12: 10 86% 89%;
+}
