@@ -4,6 +4,7 @@ import './globals.css';
 import { Navbar } from '@/components/navbar';
 import { ThemeProvider } from '@/hooks/theme-provider';
 import { cn } from '@/lib/utils';
+import { Analytics } from "@vercel/analytics/react"
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -51,6 +52,7 @@ export default function RootLayout({
           'bg-brand-1 dark:bg-brandDark-1 text-gs-12 dark:text-gsDark-12 font-outfit',
         )}
       >
+        <Analytics />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Navbar />
           {children}
