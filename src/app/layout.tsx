@@ -4,11 +4,11 @@ import './globals.css';
 import { Navbar } from '@/components/navbar';
 import { ThemeProvider } from '@/hooks/theme-provider';
 import { cn } from '@/lib/utils';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  axes: ['WONK', 'SOFT', 'opsz'],
   variable: '--font-fraunces',
 });
 
